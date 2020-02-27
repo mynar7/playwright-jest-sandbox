@@ -1,5 +1,8 @@
 describe('Google', () => {
   beforeAll(async () => {
+    await page.setViewportSize({
+      width: 1920, height: 1080,
+    });
     await page.goto('https://whatismybrowser.com/')
   })
 
