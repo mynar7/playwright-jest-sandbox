@@ -1,12 +1,13 @@
 module.exports = {
-  browsers: ["chromium", "webkit", "firefox"],
+  browsers: ["chromium", /* "webkit" */, "firefox"],
   launchBrowserApp: {
     ...(process.env.JEST_DEBUG
       ? {
           headless: false,
-          devtools: true,
+          // devtools: true,
           timeout: 0,
         }
-      : {}),
+      : {}
+      ),
   },
 }
