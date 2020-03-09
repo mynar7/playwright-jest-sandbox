@@ -31,20 +31,16 @@ describe('realtruck', () => {
   })
 
   test('should click tonneau covers', async () => {
-    await Promise.all([
-      page.waitForSelector('css=#catalog-title >> text="Tonneau Covers"'),
-      page.click('text="Tonneau Covers"')
-    ])
+    await page.click('text="Tonneau Covers"')
+    await page.waitForSelector('css=#catalog-title >> text="Tonneau Covers"')
     // await page.waitForSelector('#catalog-title > span')
     const header = await page.$eval('#catalog-title > span', el => el.textContent)
     expect(header).toBe('Tonneau Covers')
   })
 
   test('should click seat covers', async () => {
-    await Promise.all([
-      page.waitForSelector('css=#catalog-title >> text="Seat Covers"'),
-      page.click('text="Seat Covers"')
-    ])
+    await page.click('text="Seat Covers"')
+    await page.waitForSelector('css=#catalog-title >> text="Seat Covers"')
     // await page.waitForSelector('#catalog-title > span')
     const header = await page.$eval('#catalog-title > span', el => el.textContent)
     expect(header).toBe('Seat Covers')

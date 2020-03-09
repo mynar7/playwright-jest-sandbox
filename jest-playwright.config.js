@@ -1,5 +1,5 @@
 module.exports = {
-  browsers: ["chromium", /* "webkit" */, "firefox"],
+  browsers: ["chromium", "webkit", "firefox"],
   launchBrowserApp: {
     ...(process.env.JEST_DEBUG
       ? {
