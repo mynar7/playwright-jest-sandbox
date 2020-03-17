@@ -1,0 +1,7 @@
+{
+  "include": [
+    "./node_modules/jest",
+    "./node_modules/playwright",
+    "/**/*.test.js"
+  ]
+}
